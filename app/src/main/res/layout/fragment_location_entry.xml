@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".location.LocationEntryFragment">
+
+    <ImageView
+        android:id="@+id/locationImageView"
+        android:layout_width="@dimen/zipcode_entry_icon_48dp"
+        android:layout_height="@dimen/zipcode_entry_icon_48dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/location_image_description"
+        app:layout_constraintBottom_toTopOf="@+id/cityTextView"
+        app:layout_constraintEnd_toEndOf="@+id/cityEditText"
+        app:layout_constraintStart_toStartOf="@+id/cityEditText"
+        app:srcCompat="@drawable/ic_baseline_location_on_48" />
+
+    <EditText
+        android:id="@+id/cityEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/citycode_text"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.26" />
+
+    <TextView
+        android:id="@+id/cityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/enter_your_citytext"
+        android:textSize="@dimen/text_view_height_medium"
+        app:layout_constraintBottom_toTopOf="@+id/cityEditText"
+        app:layout_constraintEnd_toEndOf="@+id/cityEditText"
+        app:layout_constraintStart_toStartOf="@+id/cityEditText" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/submit_text"
+        app:layout_constraintEnd_toEndOf="@+id/cityEditText"
+        app:layout_constraintStart_toStartOf="@+id/cityEditText"
+        app:layout_constraintTop_toBottomOf="@+id/cityEditText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
